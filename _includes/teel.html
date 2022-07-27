@@ -1,11 +1,9 @@
 <div class="container-fluid">
     <div class="row m-2">
         <div class="col">
-            {% for tag in site.tags %}
-
-                <a href="#{{ tag[0] }}" type="button" data-bs-toggle="collapse" data-bs-target="WRITE IN HERE" aria-expanded="false" aria-controls="collapseExample">{{ tag[0] }} {{ tag[0] | size }}</a><br>
-
-            {% endfor %}
+            <div class="form-outline">
+                <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
+              </div>
         </div>
     </div>
 </div>
@@ -37,11 +35,11 @@
 
     {% for tag in site.tags %} <!-- Select a tag -->
 
-    <div class="container-fluid border border-1 border-primary p-2 m-2">
+    <div class="container-fluid border border-1 border-primary p-2 m-2" id="wrap{{ tag[0] | slugify }}">
         
         <div class="row"> <!-- Tag title and button-->
 
-            <div class="col"><h4 href="#{{ tag[0] }}" class="text-nowrap" id="{{ tag[0] | slugify }}">{{ tag[0] }}</h4></div>
+            <div class="col"><h4 href="#{{ tag[0] }}" class="text-nowrap" id="{{ tag[0] | slugify }}">{{ tag[0] | size }} {{ tag[0] }}</h4></div>
 
             <div class="col d-flex justify-content-end">
 

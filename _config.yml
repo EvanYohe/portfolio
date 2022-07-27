@@ -5,7 +5,7 @@ description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-author:
+author: Evan Yohe
 baseurl: ""
 url: ""
 keywords: [test, test1, test2]
@@ -22,11 +22,14 @@ github_link:
 paginate: 5
 paginate_path: "/writing/page:num"
 
+show_drafts: true
+unpublished: true
+
 # Build Settings
 
-theme: minima
 plugins:
-  - jekyll-feed
+  - github-pages
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.

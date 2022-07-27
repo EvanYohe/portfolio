@@ -1,18 +1,67 @@
 ---
+layout: default
 title: Writings
-layout: homepage
 ---
 
-<div class="container-fluid p-3 m-3">
-    <div class="row">
-        <div class="col-8">
-            {% includes postlist.html %}
+<div class="container-fluid m-2">
+    <div class="row row-col-1 row-col-md-2">
+        <div class="col-7">
+            <div class="container-fluid">
+
+                {% for post in paginator.posts %}
+
+                <div class="card m-2">
+                    <h5 class="card-header">{{ post.date | date: "%Y-%m-%d %H:%M" }}</a></h5>
+                    <div class="card-body">
+                      <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                      <p class="card-text">{{ post.content }}</p>
+                      <span class=""><a href="{{ post.url }}" class="btn btn-lg btn-primary text text-center">Go somewhere</a></span>
+                    </div>
+                  </div>
+
+            {% endfor %}
+
+            </div>
+
+<!-- Pagination links -->
+            <div class="container-fluid m-2">
+                <div class="row d-flex justify-content-center">
+                    <div class="col text-center">
+
+                        {% if paginator.previous_page %}
+
+                            <a href="{{ paginator.previous_page_path }}" class="btn btn-primary">Previous</a>
+
+                        {% else %}
+
+                            <span class="previous">Previous</span>
+
+                        {% endif %}
+
+                    </div>
+
+                    <div class="col text-center"><span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></div>
+
+                    <div class="col text-center">
+
+                        {% if paginator.next_page %}
+
+                            <a href="{{ paginator.next_page_path }}" class="btn btn-primary">Next</a>
+
+                        {% else %}
+
+                            <span class="next ">Next</span>
+                        
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-4">
-            {% includes taglist.html %}
+        <div class="col-5">
+
+            {% include teel.html %}
+            
         </div>
-    </div>
-    <div class="row">
-        {% includes paginator.html %}
     </div>
 </div>
