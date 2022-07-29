@@ -1,9 +1,11 @@
 <div class="container-fluid">
     <div class="row m-2">
         <div class="col">
+
             <div class="form-outline">
-                <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
+                <input type="search" id="searchbar" class="form-control" placeholder="Search" aria-label="Search" />
               </div>
+
         </div>
     </div>
 </div>
@@ -35,11 +37,11 @@
 
     {% for tag in site.tags %} <!-- Select a tag -->
 
-    <div class="container-fluid border border-1 border-primary p-2 m-2" id="wrap{{ tag[0] | slugify }}">
+    <div class="container-fluid border border-1 border-primary p-2 m-2">
         
         <div class="row"> <!-- Tag title and button-->
 
-            <div class="col"><h4 href="#{{ tag[0] }}" class="text-nowrap" id="{{ tag[0] | slugify }}">{{ tag[0] | size }} {{ tag[0] }}</h4></div>
+            <div class="col"><h4 class="text-nowrap">{{ tag[0] }}</h4></div>
 
             <div class="col d-flex justify-content-end">
 
