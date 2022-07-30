@@ -2,35 +2,21 @@
 // Add an event listener 'input' to the searchbar
 // On event, compare input text to list of collapsables and expand if input text matches collapsable element id
 
-const collapseElementList = document.querySelectorAll('.collapse')
-const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
+const collapseElementList = document.querySelectorAll('.collapse');
+const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl));
 
-let tagList = document.getElementById('hideTagList');
-const tags = tagList.querySelectorAll('#collapse');
+const searchBar = document.getElementById('searchbar');
 
-Array.from(tags).forEach((tag) => 
-  new bootstrap.Collapse(
-
-    '#collapse',
-
-    {
-      parent: hideTagList,
-      toggle: false
-    }
-  )
-)
-
-document.querySelector('#searchbar').addEventListener('input', () => {
-
-    const input = document.getElementById('searchbar').value.toLowerCase();
-
-    tags.forEach(tag => {
-
-        let tagText = tag.id;
-        if (tagText == input){
-            
-            tag.collapse("show");
-
+searchBar.addEventListener('input', () => {
+    const searchText = searchBar.value.toLowerCase()
+    collapseList.forEach(collapse => {
+        const collapseId = collapse.element.id.toLowerCase()
+        if (collapseId.includes(searchText)) {
+            collapse.show()
+        } else {
+            collapse.hide()
         }
-})
-});
+    }
+    )
+}
+)

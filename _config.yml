@@ -6,8 +6,8 @@ description: >-
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 author: Evan Yohe
-baseurl: "/Portfolio"
-url: "evanyohe.github.io"
+baseurl:
+url:
 keywords: [test, test1, test2]
 
 # Social Links and Variables
