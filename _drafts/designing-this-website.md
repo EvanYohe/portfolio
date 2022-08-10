@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Designing This Website: Part One"
-tags: ["html", "css", "sass", "javascript", "front-end"]
+tags: [web-dev, bootstrap, front-end]
 ---
 The chances are that if you're reading this post, you have at one point already built or tried to build your own website. If you are not part the the afformentioned group, don't panic! There is still plenty of information to be had here for the professional and novice alike.
 

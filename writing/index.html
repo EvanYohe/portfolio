@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: page
 title: Writings
 ---
 
-<div class="container-fluid m-2">
+<div class="container-fluid">
     <div class="row row-col-1 row-col-md-2">
-        <div class="col-7">
+        <div class="col-sm-7 order-2 order-sm-1">
             <div class="container-fluid">
 
                 {% for post in paginator.posts %}
@@ -14,8 +14,8 @@ title: Writings
                     <h5 class="card-header">{{ post.date | date: "%Y-%m-%d %H:%M" }}</a></h5>
                     <div class="card-body">
                       <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
-                      <p class="card-text">{{ post.content }}</p>
-                      <span class=""><a href="{{ post.url }}" class="btn btn-lg btn-primary text text-center">Go somewhere</a></span>
+                      <p class="card-text">{{ post.excerpt | truncatewords: 30 }}</p>
+                      <span class=""><a href="{{ post.url }}" class="btn border border-primary border-3 rounded-0">Go somewhere</a></span>
                     </div>
                   </div>
 
@@ -25,12 +25,12 @@ title: Writings
 
 <!-- Pagination links -->
             <div class="container-fluid m-2">
-                <div class="row d-flex justify-content-center">
+                <div class="row d-flex justify-content-center align-items-center">
                     <div class="col text-center">
 
                         {% if paginator.previous_page %}
 
-                            <a href="{{ paginator.previous_page_path }}" class="btn btn-primary">Previous</a>
+                            <a href="{{ paginator.previous_page_path }}" class="btn border border-primary border-3 rounded-0 d-block">Previous</a>
 
                         {% else %}
 
@@ -40,13 +40,13 @@ title: Writings
 
                     </div>
 
-                    <div class="col text-center"><span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></div>
+                    <div class="col text-center"><span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span></div>
 
                     <div class="col text-center">
 
                         {% if paginator.next_page %}
 
-                            <a href="{{ paginator.next_page_path }}" class="btn btn-primary">Next</a>
+                            <a href="{{ paginator.next_page_path }}" class="btn border border-primary border-3 rounded-0 d-block">Next</a>
 
                         {% else %}
 
@@ -58,9 +58,9 @@ title: Writings
                 </div>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-sm-5 order-1 order-sm-2">
 
-            {% include teel.html %}
+            {% include taglist.html %}
             
         </div>
     </div>
