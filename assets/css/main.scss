@@ -1,7 +1,24 @@
+// Pick from a list of style sets
+
+// Set A
+$primary    : #ffa56a;
+$secondary  : #CCCCCC;
+$body-bg    : #beffe6;
+
+// Set B
+// $primary    : #ffa56a;
+// $secondary  : #CCCCCC;
+// $body-bg    : #beffe6;
+
+// // Set C
+// $primary    : #ffa56a;
+// $secondary  : #CCCCCC;
+// $body-bg    : #beffe6;
+
+// // Set D
+// $primary    : #ffa56a;
+// $secondary  : #CCCCCC;
+// $body-bg    : #beffe6;
+
+// Include default variable overrides above this import
 @import "../css/bootstrap/bootstrap";
-
-
-$primary        : #68FEEC;
-$secondary      : #21D3E4;
-
-

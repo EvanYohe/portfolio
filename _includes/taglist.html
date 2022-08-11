@@ -4,7 +4,7 @@
             {% for tag in site.tags %}
             {% assign post = tag | last %} 
             
-            <a class="p-2" href="#{{ tag[0] }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}" aria-expanded="false" aria-controls="collapseExample">{{ tag[0] }}</a>
+            <a class="p-2" href="#{{ tag[0] }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}" aria-expanded="false" aria-controls="TODO">{{ tag[0] }}</a>
             
             {% endfor %}
             <script type="text/javascript" src="/assets/js/throwlist.js"></script>

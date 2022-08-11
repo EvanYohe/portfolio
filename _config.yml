@@ -16,9 +16,11 @@ twitter_username:
 twitter_link:
 github_username:
 github_link:
+linkedIn_username:
+linkedIn_link:
 
 #Pagination Settings
-
+ 
 paginate: 5
 paginate_path: "/writing/page:num"
 
