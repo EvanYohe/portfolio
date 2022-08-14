@@ -1,18 +1,16 @@
-<!-- Footer -->
-
 <div class="container-fluid">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center m-2 border-top">
-      <div class="col-md-4 d-flex">
-  
-        <div class="text-muted">Copyright © {{ site.author }} | {{ site.time | date: "%Y" }}</div>
-  
-      </div>
-      <ul class="nav col-md-4 justify-content-end align-items-center list-unstyled d-flex">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center m-2 border-top">
+    <div class="col-md-4 d-flex">
 
-        <li class="me-3"><a href="https://github.com/EvanYohe"><i class="bi-github" style="font-size: 1rem; color: #000;"></i></a></li>
-        <li class="me-3"><a href="#"><i class="bi-twitter" style="font-size: 1rem; color: #000;"></i></a></li>
-        <li class="me-3"><a href="https://linkedin.com/in/evan-yohe"><i class="bi-linkedin" style="font-size: 1rem; color: #000;"></i></a></li>
-  
-      </ul>
-    </footer>
-  </div>
+      Copyright © {{ site.author }} | {{ site.time | date: "%Y" }}
+
+    </div>
+    <ul class="nav col-md-4 justify-content-end align-items-center list-unstyled d-flex">
+
+      <li class="me-3"><a href="{{ site.github_link }}"><i class="bi-github" style="font-size: 1rem; color: #000;"></i></a></li>
+      <li class="me-3"><a href="{{ site.twitter_link }}"><i class="bi-twitter" style="font-size: 1rem; color: #000;"></i></a></li>
+      <li class="me-3"><a href="{{ site.linkedin_link }}"><i class="bi-linkedin" style="font-size: 1rem; color: #000;"></i></a></li>
+
+    </ul>
+  </footer>
+</div>

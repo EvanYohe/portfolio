@@ -1,26 +1,27 @@
 ---
-layout: page
+layout: default
 ---
 <div class="container-fluid">
     <div class="row m-2">
-        <div class="btn-group" href="#" role="group">
-            <a type="button" href="/writing/index.html" class="btn border border-primary border-3 rounded-0 d-block">Go back</a>
-            <a type="button" href="" class="btn border border-primary border-3 rounded-0 d-block">Next Post</a>
-        </div>
-        <div class="row text-center"><span>If you liked this post, you'll also enjoy...</span></div>
-    </div>
-
-    <div class="row m-2">
         <div class="col-sm-8">
 
+            <h3 class="p-2 text-center">{{ page.title }}</h3>
+            
             {{ content }}
 
-            <a type="button" href="#" class="btn border border-primary border-3 rounded-0 d-block">Back to top</a>
-
+            <div class="row">
+                <div class="btn-group" href="#" role="group">
+                    <a type="button" href="/writings/index.html" class="btn border border-primary border-3 rounded-0 d-block">Go back</a>
+                    <a type="button" href="#" class="btn border border-primary border-3 rounded-0 d-block">Back to top</a>
+                </div>
+            </div>
         </div>
         <div class="col-sm-4 text-center">
 
             {% include taglist.html %}
+
+            <p>If you like my writing and want to learn more about me or how to get in touch with me; visit my about page here to learn more about my background and what I do and where I come from.</p>
+            <a type="button" href="/about.html" class="btn border border-primary border-3 rounded-0 d-block">About</a>
 
         </div>
     </div>

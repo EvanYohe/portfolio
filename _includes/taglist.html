@@ -4,10 +4,10 @@
             {% for tag in site.tags %}
             {% assign post = tag | last %} 
             
-            <a class="p-2" href="#{{ tag[0] }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}" aria-expanded="false" aria-controls="TODO">{{ tag[0] }}</a>
+            <a class="p-2" href="#{{ tag[0] }}" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}">{{ tag[0] }}</a>
             
             {% endfor %}
-            <script type="text/javascript" src="/assets/js/throwlist.js"></script>
+            <!-- <script type="text/javascript" src="/assets/js/throwlist.js"></script> -->
         </div>
     </div>
 </div>
@@ -17,28 +17,28 @@
 <div class="accordion" id="accordionOuter">
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuter" aria-expanded="true" aria-controls="TODO">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOuter">
             Post List By Tag
             </button>
         </h2>
-        <div id="collapseOuter" class="accordion-collapse collapse show" aria-labelledby="TODO" data-bs-parent="#accordionOuter">
+        <div id="collapseOuter" class="accordion-collapse collapse show" data-bs-parent="#accordionOuter">
             <div class="accordion-flush" id="accordionInner">
 
-                {% for tag in site.tags %} <!-- Select a tag -->
+                {% for tag in site.tags %}
                 {% assign post = tag | last %}
             
                 <div class="accordion-item" id="wrap{{ tag[0] }}">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}" aria-expanded="true" aria-controls="TODO">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ tag[0] }}">
                             {{ post | size }} | {{ tag[0] }}
                         </button>
                     </h2>
-                    <div id="{{ tag[0] }}" class="accordion-collapse collapse" aria-labelledby="TODO">
+                    <div id="{{ tag[0] }}" class="accordion-collapse collapse">
                         <div class="accordion-body list-unstyled">
                 
-                            {% for post in tag[1] %}  <!-- Select a post from tag -->
+                            {% for post in tag[1] %}
                 
-                            <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} | {{ post.date | date_to_string }}</a></li>
+                                <li><a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} | {{ post.date | date_to_string }}</a></li>
                 
                             {% endfor %}
                 

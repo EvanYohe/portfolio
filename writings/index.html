@@ -1,6 +1,9 @@
 ---
-layout: page
+layout: default
 title: Writings
+description: "Welcome to my writings page! This is where I collect and aggregate all of the different pieces of my writing so I can share them with anyone who might be interested."
+keywords: ["writing", "blog", "articles", "articles", "tutorial", "arguementative", "persuasive"]
+autonav: true
 ---
 
 <div class="container-fluid">
@@ -11,19 +14,21 @@ title: Writings
                 {% for post in paginator.posts %}
 
                 <div class="card m-2">
-                    <h5 class="card-header">{{ post.date | date: "%Y-%m-%d %H:%M" }}</a></h5>
-                    <div class="card-body">
-                      <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
-                      <p class="card-text">{{ post.excerpt | truncatewords: 30 }}</p>
-                      <span class=""><a href="{{ post.url }}" class="btn border border-primary border-3 rounded-0">Go somewhere</a></span>
-                    </div>
-                  </div>
 
-            {% endfor %}
+                    <h5 class="card-header">{{ post.date | date: "%Y-%m-%d" }}</a></h5>
+
+                        <div class="card-body">
+
+                            <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                            <p class="card-text">{{ post.excerpt | truncatewords: 30 }}</p>
+                            <span class=""><a href="{{ post.url }}" class="btn border border-primary border-3 rounded-0">Go somewhere</a></span>
+                        
+                        </div>
+                </div>
+
+                {% endfor %}
 
             </div>
-
-<!-- Pagination links -->
             <div class="container-fluid m-2">
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col text-center">
@@ -39,9 +44,11 @@ title: Writings
                         {% endif %}
 
                     </div>
-
-                    <div class="col text-center"><span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span></div>
-
+                    <div class="col text-center">
+                        
+                        <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+                    
+                    </div>
                     <div class="col text-center">
 
                         {% if paginator.next_page %}

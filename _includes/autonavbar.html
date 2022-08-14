@@ -1,33 +1,36 @@
-<nav class="navbar" aria-label="TODO">
+<nav class="navbar" aria-label="Site navbar">
     <div class="container-fluid">
+
       <a class="navbar-brand" href="/index.html">{{ site.author }}</a>
-      <button class="navbar-toggler border border-4 border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="TODO" aria-expanded="true" aria-label="TODO">
+      <button class="navbar-toggler border border-4 border-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-hook" aria-controls="navbar-hook" aria-expanded="false" aria-label="Site navbar toggle">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="navbar-collapse collapse show justify-content-center bg-transparent" id="navbarsExample01">
-        <nav class="navbar-nav nav-fill flex-row justify-content-center me-auto mb-2">
+      <div class="navbar-collapse collapse show justify-content-center bg-transparent" id="navbar-hook">
+        <nav class="navbar-nav nav-fill flex-row justify-content-center">
+
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{site.baseurl}}/index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{ site.url }}/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{site.baseurl}}/about.html">About</a>
+            <a class="nav-link" href="{{ site.url }}/about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{site.baseurl}}/writing/index.html">Writings</a>
+            <a class="nav-link" href="{{ site.url }}/writings/index.html">Writings</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/EvanYohe">Github</a>
+            <a class="nav-link" href="{{ site.github_link }}">GitHub</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://linkedin.com/in/evan-yohe">LinkedIn</a>
+            <a class="nav-link" href="{{ site.linkedin_link }}">LinkedIn</a>
           </li>
+          
         </nav>
       </div>
     </div>
-  </nav>
+</nav>
 
-  <hr class="bg-danger border-2 border-top border-danger m-2 shadow-lg">
+<hr class="bg-primary border-5 border-top border-primary me-auto mb-3">
